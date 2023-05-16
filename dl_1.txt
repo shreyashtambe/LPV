@@ -8,6 +8,7 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings("ignore")
 
+------------------------ ERROR ---------------------------------
 from sklearn.datasets import load_boston
 boston = load_boston()
 
@@ -18,6 +19,22 @@ data.columns = boston.feature_names
 data.head()
 
 data['PRICE'] = boston.target 
+-----------------------------------------------------------------
+
+------------------ REPLACEMENT ----------------------------------
+
+from sklearn.datasets import fetch_openml
+import pandas as pd
+
+boston = fetch_openml(name='boston', version=1)
+
+data = pd.DataFrame(boston.data, columns=boston.feature_names)
+data['target'] = boston.target
+
+data.head()
+
+------------------------------------------------------------------
+
 
 data.shape
 
