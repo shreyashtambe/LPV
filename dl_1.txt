@@ -91,7 +91,16 @@ coeffcients = pd.DataFrame([X_train.columns,lm.coef_]).T
 coeffcients = coeffcients.rename(columns={0: 'Attribute', 1: 'Coefficients'})
 coeffcients
 
-y_pred = lm.predict(X_train)
+# using StandardScaler to resolve "TypeError: can't multiply sequence by non-int of type 'float'", 
+#typically occurs when you try to perform multiplication between 
+# a sequence (e.g., a list or array) and a non-integer float value for y_pred = lm.predict(X_train)  .
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X_train_scaled = sc.fit_transform(X_train)
+X_test_scaled = sc.transform(X_test)
+lm.fit(X_train_scaled, y_train)
+y_pred = lm.predict(X_train_scaled)
+
 
 print('R^2:',metrics.r2_score(y_train, y_pred))
 print('Adjusted R^2:',1 - (1-metrics.r2_score(y_train, y_pred))*(len(y_train)-1)/(len(y_train)-X_train.shape[1]-1))
