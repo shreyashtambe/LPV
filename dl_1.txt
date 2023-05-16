@@ -47,7 +47,7 @@ import pandas as pd
 boston = fetch_openml(name='boston', version=1)
 
 data = pd.DataFrame(boston.data, columns=boston.feature_names)
-data['target'] = boston.target
+data['PRICE'] = boston.target
 
 data.head()
 
