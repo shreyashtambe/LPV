@@ -26,9 +26,13 @@ int n;
 cout << "Enter the size of the array: ";
 cin >> n;
 int *array = new int[n];
-srand(time(0));
+ 
 for (int i = 0; i < n; i++) {
-array[i] = rand() % 100;
+    int VAR;
+    cout<<"ENTER ELEMENT AT INDEX "<<i<<" : ";
+    cin>>VAR;
+    cout<<endl;
+    array[i] = VAR;
 }
 cout << "Original Array: ";
 for (int i = 0; i < n; i++) {
