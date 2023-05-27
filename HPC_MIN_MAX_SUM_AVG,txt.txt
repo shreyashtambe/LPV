@@ -60,61 +60,22 @@ int main() {
     max_reduction(arr);
     sum_reduction(arr);
     average_reduction(arr);
-    return 0;
+return 0;
 }
 
-Output:
-
-Test case 1:
-
-Enter the size of the array: 5
-
-Enter the elements of the array:
-
-5 10 15 20 25
-
-Expected Output:
-
-Min value: 5
-
-Max value: 25
-
-Sum value: 75
-
-Average value: 15
-
-Test case 2:
+/*
 
 Enter the size of the array: 6
-
 Enter the elements of the array:
+11
+33
+44
+22
+55
+99
+Minimum value: 11
+Maximum value: 99
+Sum: 264
+Average: 44
 
-2 5 7 8 10 12
-
-Expected Output:
-
-Min value: 2
-
-Max value: 12
-
-Sum value: 44
-
-Average value: 7.33333
-
-Test case 3:
-
-Enter the size of the array: 3
-
-Enter the elements of the array:
-
--4 -2 -1
-
-Expected Output:
-
-Min value: -4
-
-Max value: -1
-
-Sum value: -7
-
-Average value: -2.33333
+*/
