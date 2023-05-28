@@ -7,10 +7,14 @@ using namespace std;
 const int N = 1e5 + 5;
 vector<int> g[N];
 bool vis[N];
+int ans[N];
+int ind=0;
 
 void dfs(int u) {
     vis[u] = true;
-
+    ans[ind]=u;
+    ind++;
+    
     #pragma omp parallel for
     for (int i = 0; i < g[u].size(); i++) {
         int v = g[u][i];
@@ -41,9 +45,9 @@ int main() {
     dfs(s);
     
     cout << "The result of traversal:\n";
-    for (int i = 1; i <= n; i++) {
-        if (vis[i])
-            cout << i << " ";
+    for (int i = 0; i < n; i++) {
+        
+            cout << ans[i]  << " ";
     }
     cout << endl;
 
@@ -73,7 +77,7 @@ Enter edge
 
 Output:
 The result of traversal:
-1 2 3 4 5 
+1 2 4 3 5 
 
 */
  
@@ -114,35 +118,35 @@ Depth-first search (DFS) traversal:
 The DFS traversal starts from vertex 1.
 Iteration 1:
 
-The queue contains {1}.
+The stack contains {1}.
 Visited vertices: {1}.
-The adjacent vertices of 1 are 2 and 3. They are added to the queue.
+The adjacent vertices of 1 are 2 and 3. They are push to the stack.
 Iteration 2:
 
-The queue contains {2, 3}.
+The stack contains {2, 3}.
 Visited vertices: {1, 2}.
-The adjacent vertices of 2 are 1 and 4. Vertex 1 is already visited, so only vertex 4 is added to the queue.
+The adjacent vertices of 2 are 1 and 4. Vertex 1 is already visited, so only vertex 4 is push to the stack.
 Iteration 3:
 
-The queue contains {3, 4}.
-Visited vertices: {1, 2, 3}.
-The adjacent vertices of 3 are 1 and 5. Vertex 1 is already visited, so only vertex 5 is added to the queue.
+The stack contains {4,3}.
+Visited vertices: {1, 2, 4}.
+The adjacent vertices of 4 are 2. Vertex 2 is already visited so continue to next elem in stack.
 Iteration 4:
 
-The queue contains {4, 5}.
-Visited vertices: {1, 2, 3, 4}.
-There are no adjacent vertices of 4 to add to the queue.
+The queue contains {3}.
+Visited vertices: {1, 2, 4,}.
+The adjacent vertices of 3 are 5. Vertex 5 is already is marked visitedafter poping from stack.
 Iteration 5:
 
-The queue contains {5}.
-Visited vertices: {1, 2, 3, 4, 5}.
-There are no adjacent vertices of 5 to add to the queue.
+The stack contains { }.
+Visited vertices: {1, 2, 4, 3, 5}.
+stack is empty.
 The traversal is complete.
 
 Output:
 
 The code prints the result of the traversal:
-The visited vertices are: 1, 2, 3, 4, 5.
+The visited vertices are: 1, 2, 4, 3, 5.
 Thus, the DFS traversal of the given graph starting from vertex 1 visits all vertices in the graph. The output matches the expected result.
 
  */
