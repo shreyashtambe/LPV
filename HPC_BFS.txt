@@ -154,6 +154,17 @@ The code prints the result of the traversal:
 The visited vertices are: 1, 2, 3, 4, 5.
 Thus, the BFS traversal of the given graph starting from vertex 1 visits all vertices in the graph. The output matches the expected result.
 
+use  following code if u want to  display content in g vector
+
+    // for(int i = 1; i <= n; i++) {
+    //     cout << "Vertex " << i << ": ";   
+    //      for (int j = 0; j < g[i].size(); j++) {
+    //             cout << g[i][j] << " ";    
+        
+    //     }   
+    //     cout << endl;
+    // }
+    
  */
  
 
