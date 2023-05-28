@@ -49,3 +49,18 @@ cout << endl;
 delete [] array;
 return 0;
 }
+
+
+/*
+
+
+
+
+
+
+
+1. Time Complexity Of parallel Bubble sort in best case is( when all data is already in sorted form):O(n)
+2. Time Complexity Of parallel Bubble sort in worst case is: O(n logn)
+3. Time Complexity Of parallel Bubble sort in average case is: O(n logn)
+
+*/
