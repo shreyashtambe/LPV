@@ -119,5 +119,11 @@ ENTER ELEMENT AT INDEX 5 : 44
 Original Array: 23 54 34 2 5 44 
 Sorted Array: 2 5 23 34 44 54 
 
+
+1. Time Complexity Of parallel Bubble sort in best case is( when all data is already in sorted form):O(n)
+2. Time Complexity Of parallel Bubble sort in worst case is: O(n logn)
+3. Time Complexity Of parallel Bubble sort in average case is: O(n logn)
+
+
 */
  
