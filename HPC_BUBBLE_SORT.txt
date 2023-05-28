@@ -53,9 +53,15 @@ return 0;
 
 /*
 
-
-
-
+Enter the size of the array: 6
+ENTER ELEMENT AT INDEX 0 : 23
+ENTER ELEMENT AT INDEX 1 : 54
+ENTER ELEMENT AT INDEX 2 : 34
+ENTER ELEMENT AT INDEX 3 : 2
+ENTER ELEMENT AT INDEX 4 : 5
+ENTER ELEMENT AT INDEX 5 : 44
+Original Array: 23 54 34 2 5 44 
+Sorted Array: 2 5 23 34 44 54 
 
 
 
