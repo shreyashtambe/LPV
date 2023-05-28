@@ -173,7 +173,7 @@ use  following code if u want to  display content in g vector
  /*
  
  
- incase external tree sathi
+ incase external ask for tree BFS traversal
  
  CODE>:
  
